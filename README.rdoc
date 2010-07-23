@@ -1,0 +1,24 @@
+= Mail Magnet
+
+Mail Magnet allows you to override e-mail recipients in ActionMailer, e.g. for testing purposes.
+
+http://gem-session.com/2010/06/overriding-e-mail-recipients-in-actionmailer
+
+== Installation
+
+Install the gem with
+    sudo gem install mail_magnet
+
+....
+
+== Rails 3 compatibility
+
+We cannot guarantee Rails 3 compatibility at this point, but we will upgrade the gem when Rails 3 is released.
+
+=== Credits
+
+Arne Hartherz
+
+{makandra.com}[http://makandra.com/]
+
+{gem-session.com}[http://gem-session.com/]
