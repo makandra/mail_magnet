@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mail_magnet}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Arne Hartherz"]
@@ -16,9 +16,34 @@ Gem::Specification.new do |s|
     "README.rdoc"
   ]
   s.files = [
-    "lib/mail_magnet/action_mailer_ext.rb",
+    ".gitignore",
+     "MIT-LICENSE",
+     "README.rdoc",
+     "Rakefile",
+     "VERSION",
+     "lib/mail_magnet.rb",
+     "lib/mail_magnet/action_mailer_ext.rb",
      "lib/mail_magnet/tmail_ext.rb",
-     "spec/app_root/app/views/mailer/letter.erb"
+     "mail_magnet.gemspec",
+     "spec/app_root/app/controllers/application_controller.rb",
+     "spec/app_root/app/models/mailer.rb",
+     "spec/app_root/app/views/mailer/letter.erb",
+     "spec/app_root/config/boot.rb",
+     "spec/app_root/config/database.yml",
+     "spec/app_root/config/environment.rb",
+     "spec/app_root/config/environments/in_memory.rb",
+     "spec/app_root/config/environments/mysql.rb",
+     "spec/app_root/config/environments/postgresql.rb",
+     "spec/app_root/config/environments/sqlite.rb",
+     "spec/app_root/config/environments/sqlite3.rb",
+     "spec/app_root/config/routes.rb",
+     "spec/app_root/lib/console_with_fixtures.rb",
+     "spec/app_root/log/.gitignore",
+     "spec/app_root/script/console",
+     "spec/mail_magnet_spec.rb",
+     "spec/spec_helper.rb",
+     "spec/support/rcov.opts",
+     "spec/support/spec.opts"
   ]
   s.homepage = %q{http://github.com/makandra/mail_magnet}
   s.rdoc_options = ["--charset=UTF-8"]

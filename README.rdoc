@@ -1,15 +1,29 @@
 = Mail Magnet
 
-Mail Magnet allows you to override e-mail recipients in ActionMailer, e.g. for testing purposes.
-
-http://gem-session.com/2010/06/overriding-e-mail-recipients-in-actionmailer
+Mail Magnet allows you to override e-mail recipients in ActionMailer so all mails go to a given address.
+This is useful for staging environments where you want to test production-like mail delivery without sending e-mails to real users.
 
 == Installation
 
 Install the gem with
+
     sudo gem install mail_magnet
 
-....
+In the environment for which you'd like to override mail recipients:
+
+    config.gem 'mail_magnet'
+    config.after_initialize { ActionMailer::Base.override_recipients = 'overridden@example.com' }
+
+Now all e-mail sent by your ActionMailers goes to 'overridden@example.com' (including CC and BCC recipients).
+The original recipients will be quoted inside the mail body, like this:
+
+    - - - Original recipients - - -
+    To: original.to@example.com
+    Cc: original.cc@example.com
+    Bcc: original.bcc@example.com
+    - - - - - - - - - - - - - - - -
+
+    Original e-mail body goes here.
 
 == Rails 3 compatibility
 
