@@ -15,7 +15,8 @@ TMail::Mail.class_eval do
     end
     parts << "---------------------------"
 
-    self.body = parts.join("\n") + "\n\n" + self.body
+    line_break = self.content_type =~ /(html)/ ? "<br />" : "\n"
+    self.body = parts.join(line_break) + line_break*2 + self.body
   end
 
   def override(method, recipients)
