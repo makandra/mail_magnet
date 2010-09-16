@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mail_magnet}
-  s.version = "0.1.1"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Arne Hartherz"]
-  s.date = %q{2010-07-23}
+  s.date = %q{2010-09-16}
   s.description = %q{Override ActionMailer recipients so all mails go to a given address}
   s.email = %q{github@makandra.com}
   s.extra_rdoc_files = [
@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
      "mail_magnet.gemspec",
      "spec/app_root/app/controllers/application_controller.rb",
      "spec/app_root/app/models/mailer.rb",
+     "spec/app_root/app/views/mailer/html_letter.erb",
      "spec/app_root/app/views/mailer/letter.erb",
      "spec/app_root/config/boot.rb",
      "spec/app_root/config/database.yml",
@@ -51,17 +52,17 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.6}
   s.summary = %q{Override ActionMailer recipients so all mails go to a given address}
   s.test_files = [
-    "spec/app_root/config/boot.rb",
+    "spec/app_root/app/controllers/application_controller.rb",
+     "spec/app_root/app/models/mailer.rb",
+     "spec/app_root/config/boot.rb",
      "spec/app_root/config/environment.rb",
-     "spec/app_root/config/routes.rb",
      "spec/app_root/config/environments/in_memory.rb",
      "spec/app_root/config/environments/mysql.rb",
      "spec/app_root/config/environments/postgresql.rb",
      "spec/app_root/config/environments/sqlite.rb",
      "spec/app_root/config/environments/sqlite3.rb",
+     "spec/app_root/config/routes.rb",
      "spec/app_root/lib/console_with_fixtures.rb",
-     "spec/app_root/app/controllers/application_controller.rb",
-     "spec/app_root/app/models/mailer.rb",
      "spec/spec_helper.rb",
      "spec/mail_magnet_spec.rb"
   ]
